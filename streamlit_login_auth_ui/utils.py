@@ -39,15 +39,15 @@ def load_lottieurl(url: str) -> str:
         pass
 
 
-def check_valid_name(name_sign_up: str) -> bool:
-    """
-    Checks if the user entered a valid name while creating the account.
-    """
-    name_regex = (r'^[A-Za-z_][A-Za-z0-9_]*')
+# def check_valid_name(name_sign_up: str) -> bool:
+#     """
+#     Checks if the user entered a valid name while creating the account.
+#     """
+#     name_regex = (r'^[A-Za-z_][A-Za-z0-9_]*')
 
-    if re.search(name_regex, name_sign_up):
-        return True
-    return False
+#     if re.search(name_regex, name_sign_up):
+#         return True
+#     return False
 
 
 def check_valid_email(email_sign_up: str) -> bool:
@@ -115,11 +115,11 @@ def check_unique_usr(username_sign_up: str):
     return True
 
 
-def register_new_usr(name_sign_up: str, email_sign_up: str, username_sign_up: str, password_sign_up: str) -> None:
+def register_new_usr(email_sign_up: str, username_sign_up: str, password_sign_up: str) -> None:
     """
     Saves the information of the new user in the _secret_auth.json file.
     """
-    new_usr_data = {'username': username_sign_up, 'name': name_sign_up, 'email': email_sign_up, 'password': ph.hash(password_sign_up)}
+    new_usr_data = {'username': username_sign_up, 'email': email_sign_up, 'password': ph.hash(password_sign_up)}
 
     with open("_secret_auth_.json", "r") as auth_json:
         authorized_user_data = json.load(auth_json)

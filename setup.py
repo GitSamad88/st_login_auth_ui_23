@@ -8,11 +8,11 @@ from setuptools import find_packages
 setup(
     name='streamlit_login_auth_ui',
 
-    author='Gauri Prabhakar',
+    author='SOVDEVS DEv1',
 
-    author_email='prabhakargauri10@gmail.com',
+    author_email='sovdevs0@gmail.com',
 
-    version='0.1.0',
+    version='0.2.0',
 
     description='A streamlit library which provides a Login/Sign-Up UI with an option to reset password, also supports cookies.',
 
@@ -20,7 +20,7 @@ setup(
 
     long_description_content_type="text/markdown",
 
-    url='https://github.com/GauriSP10/streamlit_login_signup_ui',
+    url='https://github.com/sovdevs/st_login_auth_ui_23',
 
     install_requires=[
         'streamlit',
@@ -38,7 +38,7 @@ setup(
 
     include_package_data=True,
 
-    python_requires='>=3.9.12',
+    python_requires='>=3.10',
 
     classifiers=[
 
@@ -52,7 +52,7 @@ setup(
 
         'Operating System :: OS Independent',
 
-        # 'Programming Language :: Python :: 3.9.12',
+        # 'Programming Language :: Python :: 3.10.12',
 
         # 'Topic :: Streamlit',
         # 'Topic :: Authentication',

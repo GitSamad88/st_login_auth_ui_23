@@ -1,2 +1,6 @@
-venv
+.env
 _secret_auth_.json
+.gitignore
+_readme.md
+_requirements.txt
+
