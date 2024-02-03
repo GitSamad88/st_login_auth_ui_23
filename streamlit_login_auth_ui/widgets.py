@@ -98,23 +98,23 @@ class __login__:
 
             del_login = st.empty()
             with del_login.form("Login Form"):
-                username = st.text_input("Username", placeholder = 'Your unique username')
-                password = st.text_input("Password", placeholder = 'Your password', type = 'password')
+                username = st.text_input("Username", placeholder = "ton nom d'utilisateur")
+                password = st.text_input("Password", placeholder = 'Ton mot de passe', type = 'password')
 
                 st.markdown("###")
-                login_submit_button = st.form_submit_button(label = 'Login')
+                login_submit_button = st.form_submit_button(label = 'Inscrire')
 
                 if login_submit_button == True:
                     authenticate_user_check = check_usr_pass(username, password)
 
                     if authenticate_user_check == False:
-                        st.error("Invalid Username or Password!")
+                        st.error("Invalide nom ou mot de passe !")
 
                     else:
                         st.session_state['LOGGED_IN'] = True
                         self.cookies['__streamlit_login_signup_ui_username__'] = username
                         self.cookies['username'] = username
-                        st.markdown(f"### Welcome {username}!")
+                        st.markdown(f"### Bienvenue {username}!")
                         self.cookies.save()
                         del_login.empty()
                         st.rerun()
@@ -132,7 +132,7 @@ class __login__:
         """
         Creates the sign-up widget and stores the user info in a secure way in the _secret_auth_.json file.
         """
-        with st.form("Sign Up Form"):
+        with st.form("Form d'enregistrement"):
             # name_sign_up = st.text_input("Name *", placeholder = 'Please enter your name')
             # valid_name_check = check_valid_name(name_sign_up)
             
@@ -253,10 +253,10 @@ class __login__:
         main_page_sidebar = st.sidebar.empty()
         with main_page_sidebar:
             selected_option = option_menu(
-                menu_title = 'Navigation',
+                menu_title = 'Inscription',
                 menu_icon = 'list-columns-reverse',
                 icons = ['box-arrow-in-right', 'person-plus', 'x-circle','arrow-counterclockwise'],
-                options = ['Login', 'Create Account', 'Forgot Password?', 'Reset Password'],
+                options = ['Inscrire', 'Créer un compte', 'Mot de passe oublier?', 'Réinitialisation le mot de passe'],
                 styles = {
                     "container": {"padding": "5px"},
                     "nav-link": {"font-size": "14px", "text-align": "left", "margin":"0px"}} )
